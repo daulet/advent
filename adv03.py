@@ -33,9 +33,5 @@ def solve(line):
     return score
 
 if __name__ == "__main__":
-    with open('adv03.in') as f:
-        lines = f.readlines()
-    total = 0
-    for line in lines:
-        total += solve(line)
-    print(total)
+   with open('adv03.in') as f:
+        print(sum(solve(line) for line in f.readlines()))
